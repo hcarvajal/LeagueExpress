@@ -15,14 +15,25 @@ namespace LeagueExpress.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Mission = "Mission Statement";
+            ViewBag.Philosophy = "Philosophy";
+            ViewBag.Tournament = "Tournament:";
+            ViewBag.GameTime = "Game time:";
+            ViewBag.Cost = "Cost for participation:";
+            ViewBag.Register = "To register, you need to:";
+            ViewBag.TeamSelection = "Team Selection:";
+            ViewBag.Teams = "Team names and active rosters:";
+            ViewBag.Eligibility = "Eligibility of Participation:";
+            ViewBag.Rules = "Rules standard during games:";
+            ViewBag.Exceptions = "Expectations/rules of play:";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            
+
 
             return View();
         }
