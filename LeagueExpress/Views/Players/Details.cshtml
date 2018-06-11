@@ -1,0 +1,122 @@
+﻿@model LeagueExpress.Models.Player
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Player</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.playerFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.playerFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.playerLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.playerLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.playerMiddileName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.playerMiddileName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.playerHasPlayed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.playerHasPlayed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.playerDOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.playerDOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.playerHeight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.playerHeight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.playerPlaceOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.playerPlaceOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.playerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.playerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.playerNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.playerNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.playerPosition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.playerPosition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.playerRanking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.playerRanking)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.playerApps)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.playerApps)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.currentTeam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.currentTeam)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

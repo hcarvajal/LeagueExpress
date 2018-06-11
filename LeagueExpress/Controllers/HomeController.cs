@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeagueExpress.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,11 @@ namespace LeagueExpress.Controllers
 {
     public class HomeController : Controller
     {
+        LeagueExpressDB _db = new LeagueExpressDB();
         public ActionResult Index()
         {
             return View();
+            
         }
 
         public ActionResult About()
