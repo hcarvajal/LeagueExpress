@@ -1,8 +1,4 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
+﻿
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -22,3 +18,156 @@ select,
 textarea {
     max-width: 280px;
 }
+/* bootstrap 3 helpers */
+
+.navbar-form input, .form-inline input {
+	width:auto;
+}
+
+/* end */
+
+/* custom theme */
+
+header {
+	min-height:230px;
+  	margin-bottom:5px;
+}
+
+@media (min-width: 979px) {
+  #sidebar.affix-top {
+      position: static;
+  }
+  
+  #sidebar.affix {
+      position: fixed;
+      top: 0;
+      width:21.2%;
+  }
+}
+
+.affix,.affix-top {
+   position:static;
+}
+
+/* theme */
+
+body {
+  color:#828282;
+  background-color:#eee !important;
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+
+a,a:hover {
+	color:#e90052;
+  	text-decoration:none;
+}
+
+
+
+#pageTitle {
+    color:#e90052;
+    text-decoration:none;
+}
+
+.highlight-bk {
+	background-color:#ff3333;
+    padding:1px;
+    width:100%;
+}
+
+.highlight {
+	color:#e90052;
+}
+  
+h3.highlight  {
+	padding-top:13px;
+    padding-bottom:14px;
+  	border-bottom:2px solid #e90052;
+}
+
+.navbar {
+	background-color:#e90052;
+  	color:#ffffff;
+    border:0;
+  	border-radius:0;
+}
+.navbar-nav > li > a {
+  	color:#fff;
+  	padding-left:20px;
+  	padding-right:20px;
+  	border-left:1px solid #ee3333;
+}
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+    color:#666666; 
+}
+.navbar-nav > li:last-child > a {
+  	border-right:1px solid #ee3333;
+}
+.navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #ffffff;
+	background-color:transparent;
+}
+.navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
+	color: #f0f0f0;
+	background-color:transparent;
+  	opacity:.9;
+    border-color:#e90052;
+}
+
+.nav .open > a {
+    border-color:#777777;
+    border-width:0;
+}
+
+.nav > li > a{
+    position:relative;
+    display:block;
+    padding:10px 15px;
+}
+
+.navbar-brand {
+    background-image: url(../images/bpllogo.PNG);
+    background-size: 80px 50px;
+    height:50px;
+    margin:5px;
+    width:80px;
+}
+
+.accordion-group {
+	border-width:0;
+}
+
+.dropdown-menu {
+	min-width: 250px;
+}
+
+.accordion-heading .accordion-toggle, .accordion-inner, .nav-stacked li > a {
+	padding-left:1px;
+}
+
+.caret {
+	color:#fff;
+}
+
+.navbar-toggler {
+	color:#fff;
+    border-width:0;
+    background-color:#165381;
+}
+  
+.navbar-toggler:hover {
+	background-color:#166a81;
+}
+
+.card {
+	padding-left:27px;
+    padding-right:27px;
+}
+.card > h1{
+    background-color:#2ecab2;
+    color:#0c0101;
+    text-decoration:solid;
+}
+
+/* end theme */
