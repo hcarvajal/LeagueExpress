@@ -43,11 +43,9 @@ namespace LeagueExpress.Controllers
         }
 
         // POST: Players/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,playerFirstName,playerLastName,playerMiddileName,playerHasPlayed,playerDOB,playerHeight,playerPlaceOfBirth,playerName,playerNumber,playerPosition,playerRanking,playerApps,currentTeam")] Player player)
+        public ActionResult Create(Player player)
         {
             if (ModelState.IsValid)
             {

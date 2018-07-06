@@ -28,7 +28,11 @@ namespace LeagueExpress.Controllers
             ViewBag.Teams = "Team names and active rosters:";
             ViewBag.Eligibility = "Eligibility of Participation:";
             ViewBag.Rules = "Rules standard during games:";
-            ViewBag.Exceptions = "Expectations/rules of play:";
+            ViewBag.Exceptions = "Player Conduct:";
+            ViewBag.PlayerTime = "Playing Time/Length of Game:";
+            ViewBag.PlayerReq = "Player Requirement:";
+            ViewBag.PlayerUniform = "Player Uniform/Attire:";
+            ViewBag.Provision = "Provisions for adding players:";
 
             return View();
         }

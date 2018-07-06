@@ -188,13 +188,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806110239357_init.cs" />
-    <Compile Include="Migrations\201806110239357_init.Designer.cs">
-      <DependentUpon>201806110239357_init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806110255428_init1.cs" />
-    <Compile Include="Migrations\201806110255428_init1.Designer.cs">
-      <DependentUpon>201806110255428_init1.cs</DependentUpon>
+    <Compile Include="Migrations\201807061243222_Add-Migration.cs" />
+    <Compile Include="Migrations\201807061243222_Add-Migration.Designer.cs">
+      <DependentUpon>201807061243222_Add-Migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -219,6 +215,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="images\bpllogo.PNG" />
+    <Content Include="images\coopSoccer.png" />
     <Content Include="images\early-bird-registration.png" />
     <Content Include="images\playerInfo.jpg" />
     <Content Include="images\season.jpg" />
@@ -247,7 +244,7 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="Documents\Broward PREMIER LEAGUE Adult Waiver.pdf" />
+    <Content Include="Controllers\Documents\Broward PREMIER LEAGUE Adult Waiver.pdf" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\fontawesome-webfont.woff" />
@@ -343,11 +340,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806110239357_init.resx">
-      <DependentUpon>201806110239357_init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806110255428_init1.resx">
-      <DependentUpon>201806110255428_init1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807061243222_Add-Migration.resx">
+      <DependentUpon>201807061243222_Add-Migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
