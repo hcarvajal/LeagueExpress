@@ -39,10 +39,21 @@ namespace LeagueExpress.Controllers
 
         public ActionResult Contact()
         {
-            
+            return View();
+        }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Contact(Contact contact)
+        {
+            if(ModelState.IsValid)
+            {
+                return RedirectToAction("Contact");
+            }
 
             return View();
         }
+
+
     }
 }

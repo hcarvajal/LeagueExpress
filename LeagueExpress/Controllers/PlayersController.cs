@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using LeagueExpress.Models;
+using LeagueExpress.Services;
 
 namespace LeagueExpress.Controllers
 {
@@ -49,8 +50,17 @@ namespace LeagueExpress.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 db.Players.Add(player);
                 db.SaveChanges();
+
+                MailService message = new MailService();
+                message.EmailFrom = "register@browardpremiereleague.com";
+                message.EmailTo = System.Configuration.ConfigurationManager.AppSettings["RegistrationEmail"].ToString();
+                message.Subject = "Registration Created";
+                message.Body = "Registration for: " + player.playerFirstName + " , " + player.playerLastName + " has been created" + "\r\n" + "Email: " + player.playerEmail + " Phone:" + player.playerPhoneNumber ;
+                message.SendEmail();
+
                 return RedirectToAction("Index");
             }
 

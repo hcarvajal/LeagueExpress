@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace LeagueExpress.Models
 {
     public class Player
     {
+        // default changes on create
+
+        public Player()
+        {
+            playerStatus = "pending";
+            hasPayed = 0;
+        }
 
         public int Id { get; set; }
 
@@ -68,8 +76,16 @@ namespace LeagueExpress.Models
         public string playerPhoneNumber { get; set; }
 
         [StringLength(200)]
-        [Display(Name = "Phone Email")]
+        [Display(Name = "Email")]
+        [EmailAddress(ErrorMessage = "Invalid Email Addres")]
         public string playerEmail { get; set; }
+
+        [StringLength(200)]
+        [Display(Name = "Status")]
+        public string playerStatus { get; set; }
+
+        [Display(Name = "Has Payed")]
+        public int hasPayed { get; set; }
 
     }
 
