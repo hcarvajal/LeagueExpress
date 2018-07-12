@@ -27,6 +27,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -223,7 +224,7 @@
     <Content Include="images\early-bird-registration.png" />
     <Content Include="images\playerInfo.jpg" />
     <Content Include="images\season.jpg" />
-    <Content Include="images\SoccerPlayers.jpg" />
+    <Content Include="images\Teams\SoccerPlayers.jpg" />
     <Content Include="images\soccerPlayers2.png" />
     <Content Include="images\whiteTeam.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -331,6 +332,8 @@
     <Content Include="Views\Players\Index.cshtml" />
     <Content Include="Views\Teams\Index.cshtml" />
     <Content Include="Views\Teams\White.cshtml" />
+    <Content Include="Views\Teams\WhiteSquad.cshtml" />
+    <Content Include="Views\Teams\_LayoutTeam.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
