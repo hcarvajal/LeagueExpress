@@ -51,11 +51,17 @@ namespace LeagueExpress.Controllers
         {
             if(ModelState.IsValid)
             {
-                return RedirectToAction("Contact");
+
+                _db.Contacts.Add(contact); 
+                _db.SaveChanges();
+
+                return RedirectToAction("Index");
             }
 
             return View();
         }
+
+
 
 
     }

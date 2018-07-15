@@ -14,11 +14,15 @@ namespace LeagueExpress.Models
         [StringLength(200)]
         public string Name { get; set; }
 
+        [EmailAddress(ErrorMessage = "Invalid Email Addres")]
+        [StringLength(200)]
+        [Required]
+        public string Email { get; set; }
+
         [Required]
         [StringLength(200)]
         public string Reason { get; set; }
 
-        [Required]
         [StringLength(200)]
         public string Message { get; set; }
     }

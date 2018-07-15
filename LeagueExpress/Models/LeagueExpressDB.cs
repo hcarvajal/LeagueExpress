@@ -14,7 +14,7 @@ namespace LeagueExpress.Models
         }
 
         public DbSet <Player> Players { get; set; }
-   
+        public DbSet <Contact> Contacts { get; set; }
 
 
     }
