@@ -26,28 +26,28 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Home
+                        Menu
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @Html.ActionLink("Teams","Index","Teams", new { area = "" }, new {@class = "dropdown-item"})
                         <a class="dropdown-item" href="Players/Create">Register</a>
                         <a class="dropdown-item" target="_blank" href="~/Documents/Broward PREMIER LEAGUE Adult Waiver.pdf">Waiver</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Managers</a>
+                        @Html.ActionLink("Pay Registration", "Pay", "Players", new { area = "" }, new { @class = "dropdown-item" })
                     </div>
-                </li>
-                <li class="nav-item">
-                    @Html.ActionLink("Signup","Create","Players", new { area = "" }, new { @class = "nav-link"})
                 </li>
                 <li class="nav-item">
                     @Html.ActionLink("Rules", "About", "Home", new { area = "" }, new {@class = "nav-link"})
                 </li>
 
                 <li class="nav-item">
-                    @Html.ActionLink("Location", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })
+                    @Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Photos</a>
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Player","Details","Players",new { area = "" }, new { @class = "nav-link"})
                 </li>
             </ul>
             <ul class="nav navbar-nav">

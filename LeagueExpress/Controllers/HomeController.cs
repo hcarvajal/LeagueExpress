@@ -13,6 +13,9 @@ namespace LeagueExpress.Controllers
         public ActionResult Index()
         {
             return View();
+
+            // check if user has a registration
+      
             
         }
 
