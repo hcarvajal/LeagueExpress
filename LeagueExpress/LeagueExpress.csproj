@@ -224,6 +224,7 @@
     <Content Include="images\early-bird-registration.png" />
     <Content Include="images\playerInfo.jpg" />
     <Content Include="images\season.jpg" />
+    <Content Include="images\Teams\DavidOspina.jpg" />
     <Content Include="images\Teams\SoccerPlayers.jpg" />
     <Content Include="images\soccerPlayers2.png" />
     <Content Include="images\whiteTeam.jpg" />
