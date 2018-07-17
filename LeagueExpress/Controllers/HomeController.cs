@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using LeagueExpress.Services;
+using System.Text;
 
 namespace LeagueExpress.Controllers
 {
@@ -13,6 +15,9 @@ namespace LeagueExpress.Controllers
         public ActionResult Index()
         {
             return View();
+
+            // check if user has a registration
+      
             
         }
 
@@ -48,11 +53,38 @@ namespace LeagueExpress.Controllers
         {
             if(ModelState.IsValid)
             {
-                return RedirectToAction("Contact");
+
+                _db.Contacts.Add(contact); 
+                _db.SaveChanges();
+
+                StringBuilder StrRegisterBody = new StringBuilder();
+                StrRegisterBody.Append("Name : " + contact.Name);
+                StrRegisterBody.AppendLine();
+                StrRegisterBody.Append("Email: " + contact.Email);
+                StrRegisterBody.AppendLine();
+                StrRegisterBody.Append("Reason: " + contact.Reason);
+                StrRegisterBody.AppendLine();
+                StrRegisterBody.Append("Message: " + contact.Message);
+        
+
+
+
+
+                MailService message = new MailService();
+                message.EmailFrom = "contact@browardpremiereleague.com";
+                message.EmailTo = System.Configuration.ConfigurationManager.AppSettings["ContactEmail"].ToString();
+                message.Subject = "Registration Created";
+                message.Body = StrRegisterBody.ToString();
+                message.SendEmail();
+
+
+                return RedirectToAction("Index");
             }
 
             return View();
         }
+
+
 
 
     }

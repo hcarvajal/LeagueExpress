@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using LeagueExpress.Models;
 using LeagueExpress.Services;
+using System.Text;
 
 namespace LeagueExpress.Controllers
 {
@@ -36,7 +37,7 @@ namespace LeagueExpress.Controllers
             return View(player);
         }
 
-        [Authorize]
+        
         // GET: Players/Create
         public ActionResult Create()
         {
@@ -54,11 +55,30 @@ namespace LeagueExpress.Controllers
                 db.Players.Add(player);
                 db.SaveChanges();
 
+
+                StringBuilder StrRegisterBody = new StringBuilder();
+                StrRegisterBody.Append("Registration Created for: " + player.playerFirstName + "," + player.playerLastName);
+                StrRegisterBody.AppendLine();
+                StrRegisterBody.Append("Email: " + player.playerEmail);
+                StrRegisterBody.AppendLine();
+                StrRegisterBody.Append("Phone: " + player.playerPhoneNumber);
+                StrRegisterBody.AppendLine();
+                StrRegisterBody.Append("Player Age: " + player.playerAge);
+                StrRegisterBody.AppendLine();
+                StrRegisterBody.Append("Team of Preference: " + player.currentTeam);
+                StrRegisterBody.AppendLine();
+                StrRegisterBody.Append("Position Preferred: " + player.playerPosition);
+                StrRegisterBody.AppendLine();
+                StrRegisterBody.Append("Shirt Size: " + player.playerShirtSize);
+
+
+
+
                 MailService message = new MailService();
                 message.EmailFrom = "register@browardpremiereleague.com";
                 message.EmailTo = System.Configuration.ConfigurationManager.AppSettings["RegistrationEmail"].ToString();
                 message.Subject = "Registration Created";
-                message.Body = "Registration for: " + player.playerFirstName + " , " + player.playerLastName + " has been created" + "\r\n" + "Email: " + player.playerEmail + " Phone:" + player.playerPhoneNumber ;
+                message.Body = StrRegisterBody.ToString();
                 message.SendEmail();
 
                 return RedirectToAction("Index");
@@ -80,6 +100,16 @@ namespace LeagueExpress.Controllers
                 return HttpNotFound();
             }
             return View(player);
+        }
+
+        public ActionResult Payed()
+        {
+            return View();
+        }
+
+        public ActionResult Pay()
+        {
+            return View();
         }
 
         // POST: Players/Edit/5

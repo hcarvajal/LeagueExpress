@@ -67,8 +67,14 @@ namespace LeagueExpress.Models
         [Display(Name = "Player Apps")]
         public int playerApps { get; set; }
 
+        [StringLength(200)]
+        [System.ComponentModel.DataAnnotations.Schema.Column(TypeName = "VARCHAR")]
         [Display(Name = "Team of Preference")]
-        public int currentTeam { get; set; }
+        public string currentTeam { get; set; }
+
+        [StringLength(200)]
+        [Display(Name = "Shirt Size")]
+        public string playerShirtSize { get; set; }
 
         [Required]
         [StringLength(200)]
