@@ -70,6 +70,10 @@ a,a:hover {
     text-decoration:none;
 }
 
+.pageTitle2 {
+    color:#e90052;
+    text-decoration:wavy
+}
 .highlight-bk {
 	background-color:#ff3333;
     padding:1px;
