@@ -27,6 +27,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -196,10 +197,12 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\Fixtures.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LeagueExpressDB.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Team.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IMailService.cs" />
     <Compile Include="Services\MailService.cs" />
@@ -332,6 +335,7 @@
     <Content Include="Views\Teams\White.cshtml" />
     <Content Include="Views\Players\Payed.cshtml" />
     <Content Include="Views\Players\Pay.cshtml" />
+    <Content Include="Views\Teams\_LayoutTeam.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

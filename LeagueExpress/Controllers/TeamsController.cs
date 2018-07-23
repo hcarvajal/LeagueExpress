@@ -4,11 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using LeagueExpress.Services;
+using LeagueExpress.Models;
 
 namespace LeagueExpress.Controllers
 {
     public class TeamsController : Controller
     {
+        LeagueExpressDB _db = new LeagueExpressDB();
+
         // GET: Teams
         public ActionResult Index()
         {
@@ -16,9 +19,14 @@ namespace LeagueExpress.Controllers
         }
 
         // load white page
-        public ActionResult White()
+        public ActionResult White(String Team)
         {
-            return View();
+            Team = "White";
+            var tPlayer = from p in _db.Players
+                          where p.currentTeam.ToUpper().Contains(Team)
+                          select p;
+
+                          return View(tPlayer);
         }
 
        

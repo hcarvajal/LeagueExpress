@@ -1,53 +1,26 @@
-﻿
+﻿@model IEnumerable<LeagueExpress.Models.Player>
 @{
     ViewBag.Title = "White";
     Layout = "~/Views/Teams/_LayoutTeam.cshtml";
 }
 
-<div class="card-deck">
-    <div class="card">
-        <img class="card-img-top" src="~/images/Teams/PetrCech.jpg" height="175" alt="Card image cap">
-        <div class="card-body">
-            <h6 class="card-title">1 Petr Cech</h6>
-            <h6 class="card-title">Goalkeeper</h6>
-            <h6 class="card-title">Czech Republic</h6>
-            <h7 class="card-title">Appearances: 0</h7>
-            <h7 class="card-title">Cleansheets: 0</h7>
-        </div>
-    </div>
 
-    <div class="card">
-        <img class="card-img-top" src="~/images/Teams/DavidOspina.jpg" height="175" alt="Card image cap">
-        <div class="card-body">
-            <h6 class="card-title">13 David Ospina</h6>
-            <h6 class="card-title">Goalkeeper</h6>
-            <h6 class="card-title">Colombia</h6>
-            <h7 class="card-title">Appearances: 0</h7>
-            <h7 class="card-title">Cleansheets: 0</h7>
+@foreach (var item in Model)
+{
+    <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="~/images/Teams/PetrCech.jpg" height="175" alt="Card image cap">
+            <div class="card-body">
+                <h6 class="card-title">@Html.DisplayFor(modelItem => item.playerFirstName)</h6>
+                <h6 class="card-title">Goalkeeper</h6>
+                <h6 class="card-title">Czech Republic</h6>
+                <h7 class="card-title">Appearances: 0</h7>
+                <h7 class="card-title">Cleansheets: 0</h7>
+            </div>
         </div>
-    </div>
 
-    <div class="card">
-        <img class="card-img-top" src="~/images/Teams/BerndLeno.jpg" height="175" alt="Card image cap">
-        <div class="card-body">
-            <h6 class="card-title">19 Bernd Leno</h6>
-            <h6 class="card-title">Goalkeeper</h6>
-            <h6 class="card-title">Germany</h6>
-            <h7 class="card-title">Appearances: 0</h7>
-            <h7 class="card-title">Cleansheets: 0</h7>
-        </div>
-    </div>
 
-    <div class="card">
-        <img class="card-img-top" src="~/images/Teams/EmilianoMartínez.jpg" height="175" alt="Card image cap">
-        <div class="card-body">
-            <h6 class="card-title">26 Emiliano Martínez</h6>
-            <h6 class="card-title">Goalkeeper</h6>
-            <h6 class="card-title">Argentina</h6>
-            <h7 class="card-title">Appearances: 0</h7>
-            <h7 class="card-title">Cleansheets: 0</h7>
-        </div>
     </div>
+}
 
-</div>
 
