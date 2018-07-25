@@ -50,7 +50,13 @@ namespace LeagueExpress.Models
         [StringLength(200)]
         [Display(Name = "Player")]
         [DisplayFormat(NullDisplayText = "anonymous")]
-        public string playerName { get; set; }
+        public string playerName
+        {
+            get
+            {
+                return playerFirstName + " " + playerLastName;
+            }
+        }
 
         [Display(Name = "Player Number")]
         public int playerNumber { get; set; }
