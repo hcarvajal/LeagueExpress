@@ -336,6 +336,13 @@
     <Content Include="Views\Players\Payed.cshtml" />
     <Content Include="Views\Players\Pay.cshtml" />
     <Content Include="Views\Teams\_LayoutTeam.cshtml" />
+    <Content Include="Views\Teams\Purple.cshtml" />
+    <Content Include="Views\Teams\Green.cshtml" />
+    <Content Include="Views\Teams\Yellow.cshtml" />
+    <Content Include="Views\Teams\Black.cshtml" />
+    <Content Include="Views\Teams\Red.cshtml" />
+    <Content Include="Views\Teams\NavyBlue.cshtml" />
+    <Content Include="Views\Teams\Grey.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
