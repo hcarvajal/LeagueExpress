@@ -1,0 +1,27 @@
+﻿@model IEnumerable<LeagueExpress.Models.Player>
+@{
+    ViewBag.Title = "LightBlue";
+    Layout = "~/Views/Teams/_LayoutTeam.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card-deck">
+        @foreach (var item in Model)
+        {
+            <div class="row">
+                <div class="card">
+                    <div class="card-header">
+                        <img class="card-img-top" src="~/images/Teams/PlayerLightBlue.jpg" style="height:100px; width:90px" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">@Html.DisplayFor(modelItem => item.playerName)</h6>
+                        <h6 class="card-title">@Html.DisplayFor(modelItem => item.playerPosition)</h6>
+                        <h6 class="card-title">@Html.DisplayFor(modelItem => item.playerPlaceOfBirth)</h6>
+                        <h6 class="card-title">Appearances: 0</h6>
+                        <h6 class="card-title">Cleansheets: 0</h6>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

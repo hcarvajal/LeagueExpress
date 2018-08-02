@@ -81,7 +81,7 @@ namespace LeagueExpress.Controllers
                 message.Body = StrRegisterBody.ToString();
                 message.SendEmail();
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Pay");
             }
 
             return View(player);

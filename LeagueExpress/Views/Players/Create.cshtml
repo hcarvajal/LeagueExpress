@@ -77,14 +77,17 @@
             <div class="col-md-10">
                @Html.DropDownListFor(model => model.currentTeam, new SelectList(new List<object>
                 {
-                       new {value = "White", text = "White"},
+                       new {value = "", text = ""},
+                       new {value = "Green", text = "Green"},
                        new {value = "Purple", text = "Purple" },
-                       new {value = "Green", text = "Green" },
+                       new {value = "White", text = "White" },
                        new {value = "Yellow", text = "Yellow" },
                        new {value = "Black", text = "Black" },
                        new {value = "Red", text = "Red" },
                        new {value = "Navy Blue", text = "Navy Blue" },
-                       new {value = "Grey", text = "Grey" }
+                       new {value = "Grey", text = "Grey" },
+                       new {value = "Light Blue", text = "Light Blue" },
+                       new {value = "Free Agent", text = "Free Agent"}
                 },
                    "value",
                    "text",

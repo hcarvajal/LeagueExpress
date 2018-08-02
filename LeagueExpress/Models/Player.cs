@@ -73,6 +73,7 @@ namespace LeagueExpress.Models
         [Display(Name = "Player Apps")]
         public int playerApps { get; set; }
 
+        [Required(AllowEmptyStrings=false)]
         [StringLength(200)]
         [System.ComponentModel.DataAnnotations.Schema.Column(TypeName = "VARCHAR")]
         [Display(Name = "Team of Preference")]

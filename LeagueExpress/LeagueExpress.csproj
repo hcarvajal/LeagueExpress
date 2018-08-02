@@ -343,6 +343,7 @@
     <Content Include="Views\Teams\Red.cshtml" />
     <Content Include="Views\Teams\NavyBlue.cshtml" />
     <Content Include="Views\Teams\Grey.cshtml" />
+    <Content Include="Views\Teams\LightBlue.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

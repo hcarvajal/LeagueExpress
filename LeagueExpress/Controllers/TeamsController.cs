@@ -105,5 +105,17 @@ namespace LeagueExpress.Controllers
 
             return View(tPlayer);
         }
+
+        // load Light Blue page
+        public ActionResult LightBlue(String Team)
+        {
+            Team = "Light Blue";
+            var tPlayer = from p in _db.Players
+                          where p.currentTeam.ToUpper().Contains(Team)
+                          select p;
+
+            return View(tPlayer);
+        }
+
     }
 }
