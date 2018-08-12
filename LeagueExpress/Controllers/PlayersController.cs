@@ -22,6 +22,12 @@ namespace LeagueExpress.Controllers
             return View(db.Players.ToList());
         }
 
+
+        public ActionResult Manage()
+        {
+            return View(db.Players.ToList());
+        }
+
         // GET: Players/Details/5
         public ActionResult Details(int? id)
         {
@@ -117,7 +123,7 @@ namespace LeagueExpress.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,playerFirstName,playerLastName,playerMiddileName,playerHasPlayed,playerDOB,playerHeight,playerPlaceOfBirth,playerName,playerNumber,playerPosition,playerRanking,playerApps,currentTeam")] Player player)
+        public ActionResult Edit([Bind(Exclude = "Id,playerFirstName,playerLastName,playerMiddileName,playerHasPlayed,playerHeight,playerPlaceOfBirth,playerName,playerNumber,playerPosition,playerRanking,playerApps")] Player player)
         {
             if (ModelState.IsValid)
             {

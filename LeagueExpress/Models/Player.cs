@@ -100,6 +100,10 @@ namespace LeagueExpress.Models
         [Display(Name = "Has Payed")]
         public int hasPayed { get; set; }
 
+
+        [Display(Name = "Is Captain")]
+        public int isCaptain { get; set; }
+
     }
 
 

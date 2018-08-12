@@ -221,13 +221,15 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="images\bpllogo.PNG" />
+    <Content Include="images\bplball.PNG" />
+    <Content Include="images\bpllogo.png" />
     <Content Include="images\coopSoccer.png" />
     <Content Include="images\early-bird-registration.png" />
     <Content Include="images\playerInfo.jpg" />
     <Content Include="images\season.jpg" />
     <Content Include="images\SoccerPlayers.jpg" />
     <Content Include="images\soccerPlayers2.png" />
+    <Content Include="images\stadium.jpg" />
     <Content Include="images\whiteTeam.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -344,6 +346,7 @@
     <Content Include="Views\Teams\NavyBlue.cshtml" />
     <Content Include="Views\Teams\Grey.cshtml" />
     <Content Include="Views\Teams\LightBlue.cshtml" />
+    <Content Include="Views\Players\Manage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

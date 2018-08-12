@@ -7,104 +7,183 @@
 <h4>Select a Team</h4>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2">
-            <div class="card text-white bg-danger mb-3" style="max-width: 12rem;">
-                <div class="card-header">White</div>
-                <div class="card-body">
-                    <p>
-                        @Html.ActionLink("Squad", "White", "Teams", new { area = "" }, new { @class = "btn btn-warning" })
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="card text-white bg-primary mb-3" style="max-width: 12rem;">
-                <div class="card-header">Purple</div>
-                <div class="card-body">
-                    <p>
-                        @Html.ActionLink("Squad", "Purple", "Teams", new { area = "" }, new { @class = "btn btn-warning" })
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="card text-white bg-success mb-3" style="max-width: 12rem;">
-                <div class="card-header">Green</div>
-                <div class="card-body">
-                    <p>
-                        @Html.ActionLink("Squad", "Green", "Teams", new { area = "" }, new { @class = "btn btn-warning" })
-                    </p>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-md-2">
-            <div class="card text-white bg-warning mb-3" style="max-width: 12rem;">
-                <div class="card-header">Yellow</div>
-                <div class="card-body">
-                    <p>
-                        @Html.ActionLink("Squad", "Yellow", "Teams", new { area = "" }, new { @class = "btn btn-warning" })
-                    </p>
-                </div>
-            </div>
-        </div>
+<style type="text/css">
+    .card{
+        padding-left:2px;
+        padding-right:2px;
+    }
 
-        <div class="col-md-2">
-            <div class="card text-white bg-dark mb-3" style="max-width: 12rem;">
-                <div class="card-header">Black</div>
-                <div class="card-body">
-                    <p>
-                        @Html.ActionLink("Squad", "Black", "Teams", new { area = "" }, new { @class = "btn btn-warning" })
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="card text-white bg-danger mb-3" style="max-width: 12rem;">
-                <div class="card-header">Red</div>
-                <div class="card-body">
-                    <p>
-                        @Html.ActionLink("Squad", "Red", "Teams", new { area = "" }, new { @class = "btn btn-warning" })
-                    </p>
-                </div>
-            </div>
-        </div>
+    .white{
+        background-color:#ffffff;
+    }
+
+    .purple{
+        background-color:#5124d3;
+
+    }
+
+    .green{
+        background-color:#54ca1e
+
+    }
+
+    .yellow{
+        background-color:#ffd800;
+    }
+
+    .black{
+       background-color:#0c0701;
+    }
+
+    .red{
+        background-color:#720a0a;
+    }
+
+    .navyblue{
+        background-color:#215edc;
+    }
+
+
+    .grey{
+        background-color:#808080;
+    }
+
+    .lightblue{
+        background-color:#2fbebe;
+    }
+
+    .col-md-2{
+        margin:5px 5px 5px 5px;
+    }
+
+    .card-title{
+        color:#f6f2f2;
+    }
+
+    #white-card{
+        color:#0c0701;
+    }
+
+
+</style>
+
+
+
+ <div class="row">
+
+   <div class="col-md-2">
+       <div class="card white" style="width: 12rem;">
+           <img class="card-img-top" src="~/images/stadium.jpg" alt="Card image cap">
+           <div class="card-body">
+               <h5 class="card-title" id="white-card">White Team</h5>
+               <p class="card-text">
+                   @Html.ActionLink("Club Profile", "White", "Teams", new { area = "" }, new { @class = "btn btn-outline-secondary btn-block" })
+               </p>
+           </div>
+       </div>
+   </div>
+
+     <div class="col-md-2">
+         <div class="card purple" style="width: 12rem;">
+             <img class="card-img-top" src="~/images/stadium.jpg" alt="Card image cap">
+             <div class="card-body">
+                 <h5 class="card-title">Purple Team</h5>
+                 <p class="card-text">
+                     @Html.ActionLink("Club Profile", "Purple", "Teams", new { area = "" }, new { @class = "btn btn-outline-secondary btn-block" })
+                 </p>
+             </div>
+         </div>
+     </div>
+
+     <div class="col-md-2">
+         <div class="card green" style="width: 12rem;">
+             <img class="card-img-top" src="~/images/stadium.jpg" alt="Card image cap">
+             <div class="card-body">
+                 <h5 class="card-title">Green Team</h5>
+                 <p class="card-text">
+                     @Html.ActionLink("Club Profile", "Green", "Teams", new { area = "" }, new { @class = "btn btn-outline-secondary btn-block" })
+                 </p>
+             </div>
+         </div>
+     </div>
+
+     <div class="col-md-2">
+         <div class="card yellow" style="width: 12rem;">
+             <img class="card-img-top" src="~/images/stadium.jpg" alt="Card image cap">
+             <div class="card-body">
+                 <h5 class="card-title">Yellow Team</h5>
+                 <p class="card-text">
+                     @Html.ActionLink("Club Profile", "Yellow", "Teams", new { area = "" }, new { @class = "btn btn-outline-secondary btn-block" })
+                 </p>
+             </div>
+         </div>
+     </div>
+
+     <div class="col-md-2">
+         <div class="card black" style="width: 12rem;">
+             <img class="card-img-top" src="~/images/stadium.jpg" alt="Card image cap">
+             <div class="card-body">
+                 <h5 class="card-title">Black Team</h5>
+                 <p class="card-text">
+                     @Html.ActionLink("Club Profile", "Black", "Teams", new { area = "" }, new { @class = "btn btn-outline-secondary btn-block" })
+                 </p>
+             </div>
+         </div>
+     </div>
+
+     <div class="col-md-2">
+         <div class="card red" style="width: 12rem;">
+             <img class="card-img-top" src="~/images/stadium.jpg" alt="Card image cap">
+             <div class="card-body">
+                 <h5 class="card-title">Red Team</h5>
+                 <p class="card-text">
+                     @Html.ActionLink("Club Profile", "Red", "Teams", new { area = "" }, new { @class = "btn btn-outline-secondary btn-block" })
+                 </p>
+             </div>
+         </div>
+     </div>
+
+     <div class="col-md-2">
+         <div class="card navyblue" style="width: 12rem;">
+             <img class="card-img-top" src="~/images/stadium.jpg" alt="Card image cap">
+             <div class="card-body">
+                 <h5 class="card-title">Navy Blue Team</h5>
+                 <p class="card-text">
+                     @Html.ActionLink("Club Profile", "NavyBlue", "Teams", new { area = "" }, new { @class = "btn btn-outline-secondary btn-block" })
+                 </p>
+             </div>
+         </div>
+     </div>
+
+     <div class="col-md-2">
+         <div class="card grey" style="width: 12rem;">
+             <img class="card-img-top" src="~/images/stadium.jpg" alt="Card image cap">
+             <div class="card-body">
+                 <h5 class="card-title">Grey Team</h5>
+                 <p class="card-text">
+                     @Html.ActionLink("Club Profile", "Grey", "Teams", new { area = "" }, new { @class = "btn btn-outline-secondary btn-block" })
+                 </p>
+             </div>
+         </div>
+     </div>
+
+
+     <div class="col-md-2">
+         <div class="card lightblue" style="width: 12rem;">
+             <img class="card-img-top" src="~/images/stadium.jpg" alt="Card image cap">
+             <div class="card-body">
+                 <h5 class="card-title">Light Blue Team</h5>
+                 <p class="card-text">
+                     @Html.ActionLink("Club Profile", "LightBlue", "Teams", new { area = "" }, new { @class = "btn btn-outline-secondary btn-block" })
+                 </p>
+             </div>
+         </div>
+     </div>
 
 
     </div>
-    <div class="row">
-        <div class="col-md-2">
-            <div class="card text-white bg-info mb-3" style="max-width: 12rem;">
-                <div class="card-header">Navy Blue</div>
-                <div class="card-body">
-                    <p>
-                        @Html.ActionLink("Squad", "NavyBlue", "Teams", new { area = "" }, new { @class = "btn btn-warning" })
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="card text-white bg-danger mb-3" style="max-width: 12rem;">
-                <div class="card-header">Grey</div>
-                <div class="card-body">
-                    <p>
-                        @Html.ActionLink("Squad", "Grey", "Teams", new { area = "" }, new { @class = "btn btn-warning" })
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="card text-white bg-info mb-3" style="max-width: 12rem;">
-                <div class="card-header">Light Blue</div>
-                <div class="card-body">
-                    <p>
-                        @Html.ActionLink("Squad", "LightBlue", "Teams", new { area = "" }, new { @class = "btn btn-warning" })
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+   
   
  
 </div>

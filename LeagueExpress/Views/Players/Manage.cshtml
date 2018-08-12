@@ -1,0 +1,72 @@
+﻿@model IEnumerable<LeagueExpress.Models.Player>
+@{
+    ViewBag.Title = "Manage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Manage Players</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.playerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.playerPlaceOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.playerAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.playerPosition)
+        </th>
+        <th>
+            Current Team
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hasPayed)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.playerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.playerPlaceOfBirth)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.playerAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.playerPosition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.currentTeam)
+        </td>
+        @if(item.hasPayed == 0)
+        {
+            <td>
+                No
+            </td>
+        }
+        else
+        {
+            <td>
+                Yes
+            </td>
+        }
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+
