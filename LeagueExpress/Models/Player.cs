@@ -102,7 +102,7 @@ namespace LeagueExpress.Models
 
 
         [Display(Name = "Is Captain")]
-        public int isCaptain { get; set; }
+        public int? isCaptain { get; set; }
 
     }
 
