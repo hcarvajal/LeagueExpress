@@ -123,16 +123,27 @@ namespace LeagueExpress.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Exclude = "Id,playerFirstName,playerLastName,playerMiddileName,playerHasPlayed,playerHeight,playerPlaceOfBirth,playerName,playerNumber,playerPosition,playerRanking,playerApps")] Player player)
+        public ActionResult Edit(PlayerViewModel player)
         {
             if (ModelState.IsValid)
+
             {
-                db.Entry(player).State = EntityState.Modified;
+                var dbPlayer = db.Players.Find(player.Id);
+
+                dbPlayer.hasPayed = player.hasPayed;
+                dbPlayer.currentTeam = player.currentTeam;
+                dbPlayer.playerStatus = player.playerStatus;
+                dbPlayer.isCaptain = player.isCaptain;
+
+                db.Entry(dbPlayer).State = EntityState.Modified;
                 db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
             return View(player);
         }
+
+
 
         // GET: Players/Delete/5
         public ActionResult Delete(int? id)
