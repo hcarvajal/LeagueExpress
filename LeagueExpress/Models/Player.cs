@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel;
 
 namespace LeagueExpress.Models
@@ -100,9 +101,13 @@ namespace LeagueExpress.Models
         [Display(Name = "Has Payed")]
         public int hasPayed { get; set; }
 
-
         [Display(Name = "Is Captain")]
         public int? isCaptain { get; set; }
+
+        [StringLength(30)]
+        [Column(TypeName = "VARCHAR")]
+        [Display(Name = "Gender")]
+        public string Gender { get; set; }
 
     }
 
