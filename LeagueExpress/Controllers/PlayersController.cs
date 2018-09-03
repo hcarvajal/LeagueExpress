@@ -94,6 +94,7 @@ namespace LeagueExpress.Controllers
         }
 
         // GET: Players/Edit/5
+        [Authorize(Roles = "Administrator")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -134,6 +135,8 @@ namespace LeagueExpress.Controllers
                 dbPlayer.currentTeam = player.currentTeam;
                 dbPlayer.playerStatus = player.playerStatus;
                 dbPlayer.isCaptain = player.isCaptain;
+                dbPlayer.playerPosition = player.playerPosition;
+                dbPlayer.Gender = player.Gender;
 
                 db.Entry(dbPlayer).State = EntityState.Modified;
                 db.SaveChanges();
@@ -146,6 +149,7 @@ namespace LeagueExpress.Controllers
 
 
         // GET: Players/Delete/5
+        [Authorize(Roles = "Administrator")]
         public ActionResult Delete(int? id)
         {
             if (id == null)

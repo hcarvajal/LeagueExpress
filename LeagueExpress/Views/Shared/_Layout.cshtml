@@ -57,9 +57,10 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @Html.ActionLink("Manage League", "Index", "Home", new { area = "" }, new { @class = "dropdown-item" })
-                        @Html.ActionLink("Manage Teams", "Index", "Home", new { area = "" }, new { @class = "dropdown-item" })
+                        @Html.ActionLink("Manage Teams", "ManageTeams", "Teams", new { area = "" }, new { @class = "dropdown-item" })
                         <div class="dropdown-divider"></div>
-                        @Html.ActionLink("Manage Players", "Manage", "Players", new { area = "" }, new { @class = "dropdown-item" })
+                        @Html.ActionLink("Manage Registrations", "Manage", "Players", new { area = "" }, new { @class = "dropdown-item" })
+                        @Html.ActionLink("Manage User Roles","ManageRoles","Manage", new { area = "" },new { @class = "dropdown-item" })
                     </div>
                 </li>
                }
