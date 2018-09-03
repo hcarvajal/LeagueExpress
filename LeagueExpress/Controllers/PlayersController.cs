@@ -22,7 +22,7 @@ namespace LeagueExpress.Controllers
             return View(db.Players.ToList());
         }
 
-
+        [Authorize(Roles = "Administrator")]
         public ActionResult Manage()
         {
             return View(db.Players.ToList());

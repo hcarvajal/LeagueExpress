@@ -49,7 +49,7 @@
                 <li class="nav-item">
                     @Html.ActionLink("Sponsors","Details","Players",new { area = "" }, new { @class = "nav-link"})
                 </li>
-               @if (Context.User.Identity.IsAuthenticated && User.IsInRole("Adninistrator"))
+               @if (Context.User.Identity.IsAuthenticated && User.IsInRole("Administrator"))
                {
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
