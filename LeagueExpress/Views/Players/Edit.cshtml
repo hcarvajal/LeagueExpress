@@ -92,6 +92,39 @@
                 @Html.ValidationMessageFor(model => model.isCaptain, "", new { @class = "text-danger" })
             </div>
 
+            @Html.LabelFor(model => model.Gender,htmlAttributes: new { @class ="control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Gender, new SelectList(new List<object>
+           {
+               new {value = "", text = "" },
+               new {value = "femail", text = "female"},
+               new {value = "male", text = "male"}
+                },
+                   "value",
+                   "text",
+                   2
+                ),htmlAttributes: new { @class = "form-control" })
+
+                @Html.ValidationMessageFor(model => model.Gender,"Gender cannot be blank",htmlAttributes: new { @class = "text-danger"})
+            </div>
+
+
+            @Html.LabelFor(model => model.playerPosition, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.playerPosition, new SelectList(new List<object>
+           {
+                 new {value = "Forward", text = "Forward"},
+                 new {value = "Midfield", text = "Midfield"},
+                 new {value = "Defender", text = "Defender"},
+                 new {value = "Goalie", text = "Goalie"}
+                },
+                   "value",
+                   "text",
+                   2
+                ), htmlAttributes: new { @class = "form-control" })
+
+                @Html.ValidationMessageFor(model => model.playerPosition, "Position cannot be blank", htmlAttributes: new { @class = "text-danger" })
+            </div>
 
 
         </div>

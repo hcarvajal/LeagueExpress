@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using LeagueExpress.Services;
 using LeagueExpress.Models;
+using System.Net;
 
 namespace LeagueExpress.Controllers
 {
@@ -17,6 +18,8 @@ namespace LeagueExpress.Controllers
         {
             return View();
         }
+
+
 
         // load White page
         public ActionResult White(String Team)
@@ -117,16 +120,50 @@ namespace LeagueExpress.Controllers
             return View(tPlayer);
         }
 
-        // load Free Agents page
-        public ActionResult FreeAgents(String Team)
+        [Authorize(Roles = "Administrator")]
+        public ActionResult ManageTeams()
         {
-            Team = "Free Agent";
-            var tPlayer = from p in _db.Players
-                          where p.currentTeam.ToUpper().Contains(Team)
-                          select p;
-
-            return View(tPlayer);
+            return View(_db.Teams.ToList());
         }
+
+        // GET: Team/Details/5
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Team team = _db.Teams.Find(id);
+            if (team == null)
+            {
+                return HttpNotFound();
+            }
+            return View(team);
+        }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(Team team)
+        {
+            if(ModelState.IsValid)
+            {
+                _db.Teams.Add(team);
+                _db.SaveChanges();
+
+                return RedirectToAction("ManageTeams");
+
+            }
+
+            return View(team);
+        }
+
+
+
 
     }
 }

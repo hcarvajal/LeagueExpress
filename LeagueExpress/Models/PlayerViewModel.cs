@@ -12,5 +12,7 @@ namespace LeagueExpress.Models
         public string currentTeam { get; set; }
         public string playerStatus { get; set; }
         public int isCaptain { get; set; }
+        public string playerPosition { get; set; }
+        public string Gender { get; set; }
     }
 }

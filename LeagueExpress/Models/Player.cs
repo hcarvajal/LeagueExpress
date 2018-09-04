@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel;
 
 namespace LeagueExpress.Models
@@ -36,7 +37,6 @@ namespace LeagueExpress.Models
         public int playerHasPlayed { get; set; }
 
         [Required]
-        [Range(10, 85, ErrorMessage ="Please verify the age entered.")]
         [Display(Name ="Age")]
         public int playerAge { get; set;}
 
@@ -44,7 +44,6 @@ namespace LeagueExpress.Models
         [Display(Name = "Height")]
         public string playerHeight { get; set; }
 
-        [Required(AllowEmptyStrings = false)]
         [StringLength(200)]
         [Display(Name = "Place of Birth")]
         public string playerPlaceOfBirth { get; set; }
@@ -102,12 +101,11 @@ namespace LeagueExpress.Models
         [Display(Name = "Has Payed")]
         public int hasPayed { get; set; }
 
-
         [Display(Name = "Is Captain")]
         public int? isCaptain { get; set; }
 
-        [Required]
-        [StringLength(200)]
+        [StringLength(30)]
+        [Column(TypeName = "VARCHAR")]
         [Display(Name = "Gender")]
         public string Gender { get; set; }
 

@@ -19,8 +19,18 @@ namespace LeagueExpress.Models
         [StringLength(200)]
         public string teamManager { get; set; }
 
-        [Display(Name = "Team Size")]
-        public int teamSize { get; set; }
+        [Display(Name = "Size")]
+        public int? teamSize { get; set; }
+
+        [Display(Name = "Position")]
+        public int? teamPosition { get; set; }
+
+        [Display(Name = "Games Played")]
+        public int? teamGamesPlayed { get; set; }
+
+        [Display(Name = "Is Active")]
+        public int? teamActive { get; set; }
+
 
     }
 }
