@@ -36,6 +36,7 @@ namespace LeagueExpress.Models
         public int playerHasPlayed { get; set; }
 
         [Required]
+        [Range(10, 85, ErrorMessage ="Please verify the age entered.")]
         [Display(Name ="Age")]
         public int playerAge { get; set;}
 
@@ -43,6 +44,7 @@ namespace LeagueExpress.Models
         [Display(Name = "Height")]
         public string playerHeight { get; set; }
 
+        [Required(AllowEmptyStrings = false)]
         [StringLength(200)]
         [Display(Name = "Place of Birth")]
         public string playerPlaceOfBirth { get; set; }
@@ -103,6 +105,11 @@ namespace LeagueExpress.Models
 
         [Display(Name = "Is Captain")]
         public int? isCaptain { get; set; }
+
+        [Required]
+        [StringLength(200)]
+        [Display(Name = "Gender")]
+        public string Gender { get; set; }
 
     }
 

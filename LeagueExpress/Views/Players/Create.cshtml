@@ -11,148 +11,377 @@
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
-        <h4>Register Player</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.Label("First Name:", new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.playerFirstName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.playerFirstName, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.Label("Last Name", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.playerLastName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.playerLastName, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.Label("Middle Name", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.playerMiddileName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.playerMiddileName, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.playerHasPlayed, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownListFor(model => model.playerHasPlayed, new SelectList(new List<object>
-                {
-                       new {value = 0, text = "No"},
-                       new {value = 1, text = "Yes" }
-                },
-                   "value",
-                   "text",
-                   2
-                ),htmlAttributes: new { @class = "form-control" })
-                
-                @Html.ValidationMessageFor(model => model.playerHasPlayed, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.playerAge, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.playerAge, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.playerAge, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.playerPlaceOfBirth, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.playerPlaceOfBirth, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.playerPlaceOfBirth, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.currentTeam, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-               @Html.DropDownListFor(model => model.currentTeam, new SelectList(new List<object>
-                {
-                       new {value = "", text = ""},
-                       new {value = "Green", text = "Green"},
-                       new {value = "Purple", text = "Purple" },
-                       new {value = "White", text = "White" },
-                       new {value = "Yellow", text = "Yellow" },
-                       new {value = "Black", text = "Black" },
-                       new {value = "Red", text = "Red" },
-                       new {value = "Navy Blue", text = "Navy Blue" },
-                       new {value = "Grey", text = "Grey" },
-                       new {value = "Light Blue", text = "Light Blue" },
-                       new {value = "Free Agent", text = "Free Agent"}
-                },
-                   "value",
-                   "text",
-                   2
-                ), htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.currentTeam, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.playerPosition,htmlAttributes: new { @class = "control-label col-md-2"})
-            <div class="col-md-10">
-                @Html.DropDownListFor(model => model.playerPosition,new SelectList(new List<object>
-               {
-                 new {value = "Forward", text = "Forward"},
-                 new {value = "Midfield", text = "Midfield"},
-                 new {value = "Defender", text = "Defender"},
-               },
-               "value",
-               "text"
-               ), htmlAttributes: new { @class = "form-control" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.playerShirtSize, htmlAttributes: new { @class = "control-label col-md-2"})
-            <div class="col-md-10">
-                @Html.DropDownListFor(model => model.playerShirtSize,new SelectList(new List<object>
-                {
-                  new {value = "small" , text = "small"},
-                  new {value = "medium", text = "medium"},
-                  new {value = "large", text = "large"},
-                  new {value = "x-large", text = "x-large"},
-                },
-                "value",
-                "text"
-               ), htmlAttributes: new { @class = "form-control" }) 
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.playerEmail, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.playerEmail, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.playerEmail, "", new { @class = "text-danger" })
-            </div>
-        </div>
-        
-        <div class="form-group">
-            @Html.LabelFor(model => model.playerPhoneNumber, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.playerPhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.playerPhoneNumber, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
+<div class="form-horizontal">
+    <h4>Register Player</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.Label("First Name:", new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.playerFirstName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.playerFirstName, "", new { @class = "text-danger" })
         </div>
     </div>
+
+    <div class="form-group">
+        @Html.Label("Last Name", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.playerLastName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.playerLastName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Middle Name", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.playerMiddileName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.playerMiddileName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.playerHasPlayed, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.playerHasPlayed, new SelectList(new List<object>
+            {
+                   new {value = 0, text = "No"},
+                   new {value = 1, text = "Yes" }
+            },
+               "value",
+               "text",
+               2
+            ),htmlAttributes: new { @class = "form-control" })
+
+            @Html.ValidationMessageFor(model => model.playerHasPlayed, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.Gender, new SelectList(new List<object>
+            {
+                   new {value = "Male", text = "Male"},
+                   new {value = "Female", text = "Female" }
+            },
+               "value",
+               "text",
+               2
+            ),htmlAttributes: new { @class = "form-control" })
+
+            @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.playerAge, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.playerAge, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.playerAge, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.playerPlaceOfBirth, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @*@Html.EditorFor(model => model.playerPlaceOfBirth, new { htmlAttributes = new { @class = "form-control" } })*@
+            @Html.DropDownListFor(model => model.playerPlaceOfBirth, new SelectList(new List<object>
+             {
+                    new {value = "", text = ""},
+                    new {value = "Afghanistan", text = "Afghanistan" },
+                    new {value = "Albania", text = "Albania" },
+                    new {value = "Algeria", text = "Algeria" },
+                    new {value = "Andorra", text = "Andorra" },
+                    new {value = "Angola", text = "Angola" },
+                    new {value = "Antigua and Barbuda", text = "Antigua and Barbuda" },
+                    new {value = "Argentina", text = "Argentina" },
+                    new {value = "Armenia", text = "Armenia" },
+                    new {value = "Australia", text = "Australia" },
+                    new {value = "Austria", text = "Austria" },
+                    new {value = "Azerbaijan", text = "Azerbaijan" },
+                    new {value = "Bahamas", text = "Bahamas" },
+                    new {value = "Bahrain", text = "Bahrain" },
+                    new {value = "Bangladesh", text = "Bangladesh" },
+                    new {value = "Barbados", text = "Barbados" },
+                    new {value = "Belarus", text = "Belarus" },
+                    new {value = "Belgium", text = "Belgium" },
+                    new {value = "Belize", text = "Belize" },
+                    new {value = "Benin", text = "Benin" },
+                    new {value = "Bhutan", text = "Bhutan" },
+                    new {value = "Bolivia", text = "Bolivia" },
+                    new {value = "Bosnia and Herzegovina", text = "Bosnia and Herzegovina" },
+                    new {value = "Botswana", text = "Botswana" },
+                    new {value = "Brazil", text = "Brazil" },
+                    new {value = "Brunei", text = "Brunei" },
+                    new {value = "Bulgaria", text = "Bulgaria" },
+                    new {value = "Burkina Faso", text = "Burkina Faso" },
+                    new {value = "Burundi", text = "Burundi" },
+                    new {value = "Cabo Verde", text = "Cabo Verde" },
+                    new {value = "Cambodia", text = "Cambodia" },
+                    new {value = "Cameroon", text = "Cameroon" },
+                    new {value = "Canada", text = "Canada" },
+                    new {value = "Central African Republic (CAR)", text = "Central African Republic (CAR)" },
+                    new {value = "Chad", text = "Chad" },
+                    new {value = "Chile", text = "Chile" },
+                    new {value = "China", text = "China" },
+                    new {value = "Colombia", text = "Colombia" },
+                    new {value = "Comoros", text = "Comoros" },
+                    new {value = "Democratic Republic of the Congo", text = "Democratic Republic of the Congo" },
+                    new {value = "Republic of the Congo", text = "Republic of the Congo" },
+                    new {value = "Costa Rica", text = "Costa Rica" },
+                    new {value = "Cote d'Ivoire", text = "Cote d'Ivoire" },
+                    new {value = "Croatia", text = "Croatia" },
+                    new {value = "Cuba", text = "Cuba" },
+                    new {value = "Cyprus", text = "Cyprus" },
+                    new {value = "Czech Republic", text = "Czech Republic" },
+                    new {value = "Denmark", text = "Denmark" },
+                    new {value = "Djibouti", text = "Djibouti" },
+                    new {value = "Dominica", text = "Dominica" },
+                    new {value = "Dominican Republic", text = "Dominican Republic" },
+                    new {value = "Ecuador", text = "Ecuador" },
+                    new {value = "Egypt", text = "Egypt" },
+                    new {value = "El Salvador", text = "El Salvador" },
+                    new {value = "Equatorial Guinea", text = "Equatorial Guinea" },
+                    new {value = "Eritrea", text = "Eritrea" },
+                    new {value = "Estonia", text = "Estonia" },
+                    new {value = "Eswatini (formerly Swaziland)", text = "Eswatini (formerly Swaziland)" },
+                    new {value = "Ethiopia", text = "Ethiopia" },
+                    new {value = "Fiji", text = "Fiji" },
+                    new {value = "Finland", text = "Finland" },
+                    new {value = "France", text = "France" },
+                    new {value = "Gabon", text = "Gabon" },
+                    new {value = "Gambia", text = "Gambia" },
+                    new {value = "Georgia", text = "Georgia" },
+                    new {value = "Germany", text = "Germany" },
+                    new {value = "Ghana", text = "Ghana" },
+                    new {value = "Greece", text = "Greece" },
+                    new {value = "Grenada", text = "Grenada" },
+                    new {value = "Guatemala", text = "Guatemala" },
+                    new {value = "Guinea", text = "Guinea" },
+                    new {value = "Guinea-Bissau", text = "Guinea-Bissau" },
+                    new {value = "Guyana", text = "Guyana" },
+                    new {value = "Haiti", text = "Haiti" },
+                    new {value = "Honduras", text = "Honduras" },
+                    new {value = "Hungary", text = "Hungary" },
+                    new {value = "Iceland", text = "Iceland" },
+                    new {value = "India", text = "India" },
+                    new {value = "Indonesia", text = "Indonesia" },
+                    new {value = "Iran", text = "Iran" },
+                    new {value = "Iraq", text = "Iraq" },
+                    new {value = "Ireland", text = "Ireland" },
+                    new {value = "Israel", text = "Israel" },
+                    new {value = "Italy", text = "Italy" },
+                    new {value = "Jamaica", text = "Jamaica" },
+                    new {value = "Japan", text = "Japan" },
+                    new {value = "Jordan", text = "Jordan" },
+                    new {value = "Kazakhstan", text = "Kazakhstan" },
+                    new {value = "Kenya", text = "Kenya" },
+                    new {value = "Kiribati", text = "Kiribati" },
+                    new {value = "Kosovo", text = "Kosovo" },
+                    new {value = "Kuwait", text = "Kuwait" },
+                    new {value = "Kyrgyzstan", text = "Kyrgyzstan" },
+                    new {value = "Laos", text = "Laos" },
+                    new {value = "Latvia", text = "Latvia" },
+                    new {value = "Lebanon", text = "Lebanon" },
+                    new {value = "Lesotho", text = "Lesotho" },
+                    new {value = "Liberia", text = "Liberia" },
+                    new {value = "Libya", text = "Libya" },
+                    new {value = "Liechtenstein", text = "Liechtenstein" },
+                    new {value = "Lithuania", text = "Lithuania" },
+                    new {value = "Luxembourg", text = "Luxembourg" },
+                    new {value = "Macedonia (FYROM)", text = "Macedonia (FYROM)" },
+                    new {value = "Madagascar", text = "Madagascar" },
+                    new {value = "Malawi", text = "Malawi" },
+                    new {value = "Malaysia", text = "Malaysia" },
+                    new {value = "Maldives", text = "Maldives" },
+                    new {value = "Mali", text = "Mali" },
+                    new {value = "Malta", text = "Malta" },
+                    new {value = "Marshall Islands", text = "Marshall Islands" },
+                    new {value = "Mauritania", text = "Mauritania" },
+                    new {value = "Mauritius", text = "Mauritius" },
+                    new {value = "Mexico", text = "Mexico" },
+                    new {value = "Micronesia", text = "Micronesia" },
+                    new {value = "Moldova", text = "Moldova" },
+                    new {value = "Monaco", text = "Monaco" },
+                    new {value = "Mongolia", text = "Mongolia" },
+                    new {value = "Montenegro", text = "Montenegro" },
+                    new {value = "Morocco", text = "Morocco" },
+                    new {value = "Mozambique", text = "Mozambique" },
+                    new {value = "Myanmar (formerly Burma)", text = "Myanmar (formerly Burma)" },
+                    new {value = "Namibia", text = "Namibia" },
+                    new {value = "Nauru", text = "Nauru" },
+                    new {value = "Nepal", text = "Nepal" },
+                    new {value = "Netherlands", text = "Netherlands" },
+                    new {value = "New Zealand", text = "New Zealand" },
+                    new {value = "Nicaragua", text = "Nicaragua" },
+                    new {value = "Niger", text = "Niger" },
+                    new {value = "Nigeria", text = "Nigeria" },
+                    new {value = "North Korea", text = "North Korea" },
+                    new {value = "Norway", text = "Norway" },
+                    new {value = "Oman", text = "Oman" },
+                    new {value = "Pakistan", text = "Pakistan" },
+                    new {value = "Palau", text = "Palau" },
+                    new {value = "Palestine", text = "Palestine" },
+                    new {value = "Panama", text = "Panama" },
+                    new {value = "Papua New Guinea", text = "Papua New Guinea" },
+                    new {value = "Paraguay", text = "Paraguay" },
+                    new {value = "Peru", text = "Peru" },
+                    new {value = "Philippines", text = "Philippines" },
+                    new {value = "Poland", text = "Poland" },
+                    new {value = "Portugal", text = "Portugal" },
+                    new {value = "Qatar", text = "Qatar" },
+                    new {value = "Romania", text = "Romania" },
+                    new {value = "Russia", text = "Russia" },
+                    new {value = "Rwanda", text = "Rwanda" },
+                    new {value = "Saint Kitts and Nevis", text = "Saint Kitts and Nevis" },
+                    new {value = "Saint Lucia", text = "Saint Lucia" },
+                    new {value = "Saint Vincent and the Grenadines", text = "Saint Vincent and the Grenadines" },
+                    new {value = "Samoa", text = "Samoa" },
+                    new {value = "San Marino", text = "San Marino" },
+                    new {value = "Sao Tome and Principe", text = "Sao Tome and Principe" },
+                    new {value = "Saudi Arabia", text = "Saudi Arabia" },
+                    new {value = "Senegal", text = "Senegal" },
+                    new {value = "Serbia", text = "Serbia" },
+                    new {value = "Seychelles", text = "Seychelles" },
+                    new {value = "Sierra Leone", text = "Sierra Leone" },
+                    new {value = "Singapore", text = "Singapore" },
+                    new {value = "Slovakia", text = "Slovakia" },
+                    new {value = "Slovenia", text = "Slovenia" },
+                    new {value = "Solomon Islands", text = "Solomon Islands" },
+                    new {value = "Somalia", text = "Somalia" },
+                    new {value = "South Africa", text = "South Africa" },
+                    new {value = "South Korea", text = "South Korea" },
+                    new {value = "South Sudan", text = "South Sudan" },
+                    new {value = "Spain", text = "Spain" },
+                    new {value = "Sri Lanka", text = "Sri Lanka" },
+                    new {value = "Sudan", text = "Sudan" },
+                    new {value = "Suriname", text = "Suriname" },
+                    new {value = "Sweden", text = "Sweden" },
+                    new {value = "Switzerland", text = "Switzerland" },
+                    new {value = "Syria", text = "Syria" },
+                    new {value = "Taiwan", text = "Taiwan" },
+                    new {value = "Tajikistan", text = "Tajikistan" },
+                    new {value = "Tanzania", text = "Tanzania" },
+                    new {value = "Thailand", text = "Thailand" },
+                    new {value = "Timor-Leste", text = "Timor-Leste" },
+                    new {value = "Togo", text = "Togo" },
+                    new {value = "Tonga", text = "Tonga" },
+                    new {value = "Trinidad and Tobago", text = "Trinidad and Tobago" },
+                    new {value = "Tunisia", text = "Tunisia" },
+                    new {value = "Turkey", text = "Turkey" },
+                    new {value = "Turkmenistan", text = "Turkmenistan" },
+                    new {value = "Tuvalu", text = "Tuvalu" },
+                    new {value = "Uganda", text = "Uganda" },
+                    new {value = "Ukraine", text = "Ukraine" },
+                    new {value = "United Arab Emirates (UAE)", text = "United Arab Emirates (UAE)" },
+                    new {value = "United Kingdom (UK)", text = "United Kingdom (UK)" },
+                    new {value = "United States of America (USA)", text = "United States of America (USA)" },
+                    new {value = "Uruguay", text = "Uruguay" },
+                    new {value = "Uzbekistan", text = "Uzbekistan" },
+                    new {value = "Vanuatu", text = "Vanuatu" },
+                    new {value = "Vatican City (Holy See)", text = "Vatican City (Holy See)" },
+                    new {value = "Venezuela", text = "Venezuela" },
+                    new {value = "Vietnam", text = "Vietnam" },
+                    new {value = "Yemen", text = "Yemen" },
+                    new {value = "Zambia", text = "Zambia" },
+                    new {value = "Zimbabwe", text = "Zimbabwe" }
+             },
+                "value",
+                "text",
+                2
+             ), htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.playerPlaceOfBirth, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.currentTeam, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.currentTeam, new SelectList(new List<object>
+             {
+                    new {value = "", text = ""},
+                    new {value = "Green", text = "Green"},
+                    new {value = "Purple", text = "Purple" },
+                    new {value = "White", text = "White" },
+                    new {value = "Yellow", text = "Yellow" },
+                    new {value = "Black", text = "Black" },
+                    new {value = "Red", text = "Red" },
+                    new {value = "Navy Blue", text = "Navy Blue" },
+                    new {value = "Grey", text = "Grey" },
+                    new {value = "Light Blue", text = "Light Blue" },
+                    new {value = "Free Agent", text = "Free Agent"}
+             },
+                "value",
+                "text",
+                2
+             ), htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.currentTeam, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.playerPosition, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.playerPosition,new SelectList(new List<object>
+           {
+             new {value = "Forward", text = "Forward"},
+             new {value = "Midfield", text = "Midfield"},
+             new {value = "Defender", text = "Defender"},
+             new {value = "Goalkeeper", text = "Goalkeeper"},
+           },
+           "value",
+           "text"
+           ), htmlAttributes: new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.playerShirtSize, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.playerShirtSize,new SelectList(new List<object>
+            {
+              new {value = "small" , text = "small"},
+              new {value = "medium", text = "medium"},
+              new {value = "large", text = "large"},
+              new {value = "x-large", text = "x-large"},
+            },
+            "value",
+            "text"
+           ), htmlAttributes: new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.playerEmail, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.playerEmail, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.playerEmail, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.playerPhoneNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.playerPhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.playerPhoneNumber, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </div>
+</div>
 }
 
 <div>

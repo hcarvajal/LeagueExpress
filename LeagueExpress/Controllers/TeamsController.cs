@@ -117,5 +117,16 @@ namespace LeagueExpress.Controllers
             return View(tPlayer);
         }
 
+        // load Free Agents page
+        public ActionResult FreeAgents(String Team)
+        {
+            Team = "Free Agent";
+            var tPlayer = from p in _db.Players
+                          where p.currentTeam.ToUpper().Contains(Team)
+                          select p;
+
+            return View(tPlayer);
+        }
+
     }
 }

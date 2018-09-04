@@ -348,6 +348,7 @@
     <Content Include="Views\Teams\Grey.cshtml" />
     <Content Include="Views\Teams\LightBlue.cshtml" />
     <Content Include="Views\Players\Manage.cshtml" />
+    <Content Include="Views\Teams\FreeAgents.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
