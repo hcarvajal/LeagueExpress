@@ -1,0 +1,83 @@
+﻿@model LeagueExpress.Models.MatchSchedule
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MatchSchedule</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.matchWeek)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.matchWeek)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.matchDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.matchDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.matchTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.matchTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.matchHomeTeam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.matchHomeTeam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.matchAwayTeam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.matchAwayTeam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.matchHomeResult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.matchHomeResult)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.matchAwayResult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.matchAwayResult)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.matchStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.matchStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

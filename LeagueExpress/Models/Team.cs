@@ -28,6 +28,9 @@ namespace LeagueExpress.Models
         [Display(Name = "Games Played")]
         public int? teamGamesPlayed { get; set; }
 
+        [Display(Name = "Total Points")]
+        public int? teamPoints { get; set; }
+
         [Display(Name = "Is Active")]
         public int? teamActive { get; set; }
 

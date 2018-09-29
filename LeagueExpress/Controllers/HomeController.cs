@@ -42,6 +42,12 @@ namespace LeagueExpress.Controllers
             return View();
         }
 
+
+        public ActionResult News()
+        {
+            return View();
+        }
+
         public ActionResult Contact()
         {
             return View();

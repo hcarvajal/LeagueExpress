@@ -17,5 +17,7 @@ namespace LeagueExpress.Models
         public DbSet <Contact> Contacts { get; set; }
 
         public System.Data.Entity.DbSet<LeagueExpress.Models.Team> Teams { get; set; }
+
+        public DbSet <MatchSchedule> MatchSchedules { get; set; }
     }
 }

@@ -49,6 +49,10 @@
                 <li class="nav-item">
                     @Html.ActionLink("Sponsors","Details","Players",new { area = "" }, new { @class = "nav-link"})
                 </li>
+                <li>
+                    @Html.ActionLink("Free Agents", "FreeAgent", "Teams", new { area = ""}, new { @class = "nav-link"})
+                </li>
+
                @if (Context.User.Identity.IsAuthenticated && User.IsInRole("Administrator"))
                {
                 <li class="nav-item dropdown">
@@ -58,6 +62,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @Html.ActionLink("Manage League", "Index", "Home", new { area = "" }, new { @class = "dropdown-item" })
                         @Html.ActionLink("Manage Teams", "ManageTeams", "Teams", new { area = "" }, new { @class = "dropdown-item" })
+                        @Html.ActionLink("Manage Schedules", "Index", "MatchSchedules", new { area = "" }, new { @class = "dropdown-item" })
                         <div class="dropdown-divider"></div>
                         @Html.ActionLink("Manage Registrations", "Manage", "Players", new { area = "" }, new { @class = "dropdown-item" })
                         @Html.ActionLink("Manage User Roles","ManageRoles","Manage", new { area = "" },new { @class = "dropdown-item" })
@@ -108,7 +113,7 @@
              <div class="col-sm-12">
                  <div class="card">
                      <div class="card-body">
-                         League Starts September 9th, 2018. Sign up now!!! <span class="fa fa-heart-o"></span>
+                         Welcome everyone and thanks for joining the Broward Professional League.<span class="fa fa-heart-o"></span>
                      </div>
                  </div>
 

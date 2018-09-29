@@ -120,6 +120,18 @@ namespace LeagueExpress.Controllers
             return View(tPlayer);
         }
 
+
+        //load all players that are FreeAgents
+        public ActionResult FreeAgent(String Team)
+        {
+            Team = "Free Agent";
+            var tPlayer = from p in _db.Players
+                          where p.currentTeam.ToUpper().Contains(Team)
+                          select p;
+
+            return View(tPlayer);
+        }
+
         [Authorize(Roles = "Administrator")]
         public ActionResult ManageTeams()
         {
