@@ -27,7 +27,8 @@ namespace LeagueExpress.Controllers
             ViewBag.Philosophy = "Philosophy";
             ViewBag.Tournament = "Tournament:";
             ViewBag.GameTime = "Game time:";
-            ViewBag.Cost = "Cost for participation:";
+            ViewBag.Cost = "Fee of participation:";
+            ViewBag.Uniform = "Uniform:";
             ViewBag.Register = "To register, you need to:";
             ViewBag.TeamSelection = "Team Selection:";
             ViewBag.Teams = "Team names and active rosters:";

@@ -228,7 +228,10 @@
     <Content Include="images\bpllogo.png" />
     <Content Include="images\coopSoccer.png" />
     <Content Include="images\early-bird-registration.png" />
+    <Content Include="images\lesCelticsVerts.jpg" />
+    <Content Include="images\noRefund.png" />
     <Content Include="images\playerInfo.jpg" />
+    <Content Include="images\royal blue.jpg" />
     <Content Include="images\season.jpg" />
     <Content Include="images\SoccerPlayers.jpg" />
     <Content Include="images\soccerPlayers2.png" />
