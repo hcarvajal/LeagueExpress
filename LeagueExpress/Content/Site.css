@@ -174,4 +174,12 @@ h3.highlight  {
     text-decoration:solid;
 }
 
+.playoffs{
+    background-color:#2ecab2;
+}
+
+.pre-playoffs{
+    background-color:#20eaea;
+}
+
 /* end theme */
